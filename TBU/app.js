@@ -23,6 +23,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/ninjaspy21', function(req,res,next){
+  res.render('ninjaspy21.hbs', {title: 'TBU-Ninjaspy21'})
+})
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
